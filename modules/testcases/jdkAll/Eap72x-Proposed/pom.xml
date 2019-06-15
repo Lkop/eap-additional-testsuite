@@ -130,38 +130,6 @@
 		    <artifactId>axis2-transport-jms</artifactId>
 		    <version>1.7.9</version>
 		</dependency>
-                <dependency>
-                    <groupId>org.jboss.remotingjmx</groupId>
-                    <artifactId>remoting-jmx</artifactId>
-                    <exclusions>
-                        <exclusion>
-                            <groupId>org.jboss.logging</groupId>
-                            <artifactId>jboss-logging-processor</artifactId>
-                        </exclusion>
-                        <exclusion>
-                            <groupId>org.jboss.logmanager</groupId>
-                            <artifactId>jboss-logmanager</artifactId>
-                        </exclusion>
-                    </exclusions>
-                </dependency>
-                <dependency>
-		    <groupId>io.undertow</groupId>
-		    <artifactId>undertow-core</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>io.undertow</groupId>
-		    <artifactId>undertow-servlet</artifactId>
-		    <exclusions>
-		        <exclusion>
-		            <groupId>org.jboss.spec.javax.annotation</groupId>
-		            <artifactId>jboss-annotations-api_1.2_spec</artifactId>
-		        </exclusion>
-		    </exclusions>
-		</dependency>
-		<dependency>
-		    <groupId>io.undertow</groupId>
-		    <artifactId>undertow-websockets-jsr</artifactId>
-		</dependency>
             </dependencies>
         </profile>
 
@@ -274,38 +242,6 @@
 		    <groupId>org.apache.axis2</groupId>
 		    <artifactId>axis2-transport-jms</artifactId>
 		    <version>1.7.9</version>
-		</dependency>
-                <dependency>
-                    <groupId>org.jboss.remotingjmx</groupId>
-                    <artifactId>remoting-jmx</artifactId>
-                    <exclusions>
-                        <exclusion>
-                            <groupId>org.jboss.logging</groupId>
-                            <artifactId>jboss-logging-processor</artifactId>
-                        </exclusion>
-                        <exclusion>
-                            <groupId>org.jboss.logmanager</groupId>
-                            <artifactId>jboss-logmanager</artifactId>
-                        </exclusion>
-                    </exclusions>
-                </dependency>
-                <dependency>
-		    <groupId>io.undertow</groupId>
-		    <artifactId>undertow-core</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>io.undertow</groupId>
-		    <artifactId>undertow-servlet</artifactId>
-		    <exclusions>
-		        <exclusion>
-		            <groupId>org.jboss.spec.javax.annotation</groupId>
-		            <artifactId>jboss-annotations-api_1.2_spec</artifactId>
-		        </exclusion>
-		    </exclusions>
-		</dependency>
-		<dependency>
-		    <groupId>io.undertow</groupId>
-		    <artifactId>undertow-websockets-jsr</artifactId>
 		</dependency>
             </dependencies>
         </profile>
@@ -467,19 +403,6 @@
         </profile>
 
         <profile>
-            <id>remotingActivate</id>
-            <activation>
-                <property>
-                    <name>module</name>
-                    <value>remoting</value>
-                </property>
-            </activation>
-            <modules>
-                <module>remoting</module>
-            </modules>
-        </profile>
-
-        <profile>
             <id>securityActivate</id>
             <activation>
                 <property>
@@ -564,7 +487,6 @@
 		<module>management</module>
                 <module>manualmode</module>
 		<module>messaging</module>
-                <module>remoting</module>
 		<module>security</module>
 		<module>server</module>
 		<module>web</module>
